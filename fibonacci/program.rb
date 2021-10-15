@@ -1,12 +1,9 @@
-# asking for user input
 puts "Enter a positive integer to check if its a fibonacci number:"
 n = gets.chomp.to_i
 
 if n > 0
-  # init fibonacci seq
   fibonacci_seq = [0, 1]
 
-  # keeps adding numbers until output of each iteration is equal to or greater than n
   loop do
     fibonacci_num = fibonacci_seq[-1] + (fibonacci_seq[-2])
     #p fibonacci_num
@@ -14,7 +11,6 @@ if n > 0
     fibonacci_seq << fibonacci_num
     break if fibonacci_num == n
   end
-
 
   # output
   if fibonacci_seq.include?(n)
