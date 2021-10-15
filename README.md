@@ -115,6 +115,62 @@ This will run the given code file. Enter appropraite input to get desired output
 ----
 
 
+## Fibonacci
+
+### ❗ Problem Details
+> [What is fibonacci?](https://www.mathsisfun.com/numbers/fibonacci-sequence.html)
+
+Should return whether given positive integer by user, `n`, is fibonacci number or not. If its a Fibonacci number then show its sequence in the fiobancci series. And if its not a fibonacci number then show the nearest fibonacci numbers both before and after the number `n`.
+
+The program will calculate fibonacci numbers for positive integers only and not negative.
+
+#### ⌨️ Example input:
+```bash
+23
+```
+
+```bash
+3
+```
+
+#### 💻 Expected output:
+```bash
+Number entered is not a fibonacci number.
+Its previous nearest fibonacci number is 21.
+And next nearest fibonacci number is 34.
+```
+
+```bash
+Success! Number you entered is a fibonacci number.
+Its index in fibonacci sequence is 4.
+```
+
+### ✔️ Solution Details
+
+<h4><img src="https://img.icons8.com/color/12/000000/idea.png"/> Logic</h4>
+
+1. Perform calculation only for integer input where `n` > 0.
+2. Initialize an array, `fibonacci_seq`, which will hold the fibonacci numbers and initiate it with values of `0` & `1` so we can calculate next fibonacci numbers.
+3. Initiate a loop where in each iteration it performs addition of last 2 fibonacci numbers in `fibonacci_seq` array to find next fiobanacci number. Break the loop if the fibonacci number calculated in this iteration is greater than the input number `n`. However if its less than `n` then append the fibonacci number to `fibonacci_seq`. Break the loop if the fibonacci number is equal to `n`.
+4. Will continue iteration (Step 3) until conditions meet and `break` is applied.
+5. If user entered a fibonacci number then show output of its index in the `fibonacci_seq`. Otherwise show the nearest fibonacci numbers both before and after `n`.
+
+
+The solution of this problem can be found in `fibonacci/program.rb` file.
+
+
+#### 📋 Local Execution
+
+Clone this repo, navigate to the `fibonacci/` directory and run the following commands in Terminal:
+
+```bash
+ruby program.rb
+```
+
+This will run the given code file. Enter appropraite input to get desired output.
+
+----
+
 
 ![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.mathematica&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
 
