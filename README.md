@@ -21,16 +21,19 @@
 
 ### ❗ Problem Details
 > [What is factorial?](https://www.cuemath.com/numbers/factorial/)
+
 > [Why 0! = 1](https://www.youtube.com/watch?v=X32dce7_D48&ab_channel=EddieWoo)
 
 Should return the factorial for any integer input which is greater than 0.
 
 #### ⌨️ Example input:
+
 ```bash
 19
 ```
 
 #### 💻 Expected output:
+
 ```bash
 121645100408832000
 ```
@@ -91,8 +94,8 @@ Should return list of factors in ascending order for any integer input which is 
 4. Since we know that prime numbers have no factors other than `1` and `n` itself, we check for it with the help of `prime` library and end the program.
 5. Now, for composite numbers we initiate a loop which will initiate from integer `2` (since we know `1` is a factor for any `n` where `n > 0`) to `n-1` (with same logic) where for each iteration it will check the following:
     1. Stop the loop if the loop variable `factor` is already in our `factors` array. This means its calculation is already been done and also for the numbers till `n`.<br>
-    2. If number isn't in `factors` then we check if `n` is fully divisible by `factor`. If it is divisible it will return 0. And then we append the `factor` in `factors`. After that we would also like to append another factor `second_factor` to `factors` list for which `factor` was fully divisible. To find `second_factor`, we do `n / factor`. Before adding `second_factor` to list we check if its equal to `factor`, because for many `n` such as 36 where its square root is 6, it has both `factor` and `second_factor` as 6. If both are equal we dont add to `factors` to avoid duplicate entries and this also means that no new factors of `n` will be found so we stop the loop. If they aren't equal we append to `factors`.<br>
-    3. Next iteratiom.<br>
+    2. If number isn't in `factors` then we check if `n` is fully divisible by `factor`. If it is fully divisible it will return remainder `0`. And then we append the `factor` in `factors`. After that we would also like to append another factor `second_factor` to `factors` list for which `factor` was fully divisible. To find `second_factor`, we do `n / factor`. Before adding `second_factor` to list we check if its equal to `factor`, because for many integers `n` such as 36 where its square root is 6, it has both `factor` and `second_factor` as equal to 6. If both factors are equal we dont add `second_factor` to `factors` to avoid duplicate factor and this also means that no new factors of `n` will be found after, so we stop the loop. If both factors aren't equal then we append to `factors`.<br>
+    3. If `factor` isn't fully divisible then we move on to next iteratiom.<br>
 6. Finally, we have our `factors` array of `n`. We show the list to the user by arranging numbers in ascending order with `.sort` method.
 
 
