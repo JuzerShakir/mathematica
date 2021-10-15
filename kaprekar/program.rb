@@ -1,10 +1,11 @@
-# refer http://oeis.org/A053816 for list of kaprekar numbers
-
-# asks user for input
 puts "Enter any positive integer:"
 n = gets.chomp.to_i
 
-# squares input
+if n <= 0
+  puts "Only positive integers."
+  exit
+end
+
 n_sqr = n ** 2
 #p n_sqr
 
