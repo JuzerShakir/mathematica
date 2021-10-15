@@ -120,7 +120,7 @@ This will run the given code file. Enter appropraite input to get desired output
 ### ❗ Problem Details
 > [What is fibonacci?](https://www.mathsisfun.com/numbers/fibonacci-sequence.html)
 
-Should return whether given positive integer by user, `n`, is fibonacci number or not. If its a Fibonacci number then show its sequence in the fiobancci series. And if its not a fibonacci number then show the nearest fibonacci numbers both before and after the number `n`.
+Should return whether given positive integer by user, `n`, is fibonacci number or not. If its a Fibonacci number then show its index number in the fiobancci series. And if its not a fibonacci number then show the nearest fibonacci numbers both before and after the number `n`.
 
 The program will calculate fibonacci numbers for positive integers only and not negative.
 
@@ -134,13 +134,15 @@ The program will calculate fibonacci numbers for positive integers only and not 
 ```
 
 #### 💻 Expected output:
-```bash
+**Output for `23`**
+```
 Number entered is not a fibonacci number.
 Its previous nearest fibonacci number is 21.
 And next nearest fibonacci number is 34.
 ```
 
-```bash
+**Output for `3`**
+```
 Success! Number you entered is a fibonacci number.
 Its index in fibonacci sequence is 4.
 ```
