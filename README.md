@@ -12,7 +12,7 @@
 - [Factors](#factors)<br>
 - [Fibonacci](#fibonacci)<br>
 - [Kaprekar](#kaprekar)<br>
-- [Prime & Composite](#prime_and_composite)<br>
+- [Prime & Composite](#prime-and-composite)<br>
 - [Ratio](#ratio)<br>
 
 ----
