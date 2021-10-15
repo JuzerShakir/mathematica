@@ -311,7 +311,7 @@ Should return simplest form of rational number for any integers input by user, i
 **Output for `-91/-73`**
 ```
 The greatest common divisor is 1 of -91/-73.
-And its simplest form is 91/73.
+And it is already in its simplest form.
 ```
 
 **Output for `-21/98`**
@@ -347,6 +347,7 @@ ruby program.rb
 
 This will run the given code file. Enter appropraite input to get desired output.
 
+----
 
 ![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.mathematica&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
 
