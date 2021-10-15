@@ -7,7 +7,7 @@ n = gets.chomp.to_i
 
 # checking user input
 if n == 1
-  puts "Factor of 1 is 1 itself."
+  puts "\nFactor of 1 is 1 itself."
   exit
 elsif n > 1
   factors = [1, n]
@@ -18,31 +18,31 @@ end
 
 # if input is prime
 if n.prime?
- puts "#{n} is a Prime number. Its factors are: #{factors}"
+ puts "\n#{n} is a Prime number. Its factors are: #{factors}"
  exit
 end
 
 # since we know 1 is a factor of any number, we start our calculations from 2
-2.upto(n) do | multiple |
+2.upto(n) do | factor |
   # this line is key to stop loop earlier
-  # it will stop looping if it finds that multiple is already included in list which means its calculation is already done
-  if factors.include?(multiple)
+  # it will stop looping if it finds that factor is already included in list which means its calculation is already done
+  if factors.include?(factor)
     break
-  elsif n % multiple == 0
-    # multiple added to factors list
-    factors << multiple
-    # n = multiple * second_multiple
-    second_multiple = n / multiple
+  elsif n % factor == 0
+    # factor added to factors list
+    factors << factor
+    # n = factor * second_factor
+    second_factor = n / factor
 
     # another key line to stop loop earlier
     # we dont add duplicate entries to factors
-    if second_multiple == multiple
+    if second_factor == factor
      break
     else
-      factors << second_multiple
+      factors << second_factor
     end
   end
 end
 
 # arranging factors in ascending order
-puts "Factors of #{n} are:\n#{factors.sort}"
+puts "\nFactors of #{n} are:\n#{factors.sort}"
