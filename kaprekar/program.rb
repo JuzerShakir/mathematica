@@ -11,35 +11,26 @@ n_sqr = n ** 2
 
 # converts int to array
 arr = n_sqr.digits.reverse
-# length of squared number
-arr_count = arr.count
 #p arr
+
+arr.unshift(0) if arr.count.odd?
+#p arr
+
+arr_count = arr.count
 # p arr_count
 
-# if the length is odd we add a 0 before the number, this wont change the value
-# we will need an even number of digits for grouping
-arr.unshift(0) if arr_count.odd?
-#p arr
-
-# that will hold the value of sum of digits
 total = 0
 
-# we group numbers with breaker number of digits which will be half of the lenght rounded to the nearest integer
-# since length of our arr which holds square value will always be even we can directly give arr_count..
-# but for number 1 it is special case where length of 1 square is 1 and dividng that by 2 will give 0.5 and array slicing will raise error
-# so we round to nearest int
-breaker = (arr_count.to_f / 2).round
+members = arr_count / 2
+# p members
 
-arr.each_slice(breaker) do | ele |
-  #p breaker
-  #p ele
-  # each group of numbers are joined and converted to int and added up to total
-  total += ele.join.to_i
+arr.each_slice(members) do | group |
+  #p group
+  # group is list so their elements are joined and converted to int and added up to total
+  total += group.join.to_i
 end
-
 #p total
 
-# checks if input number is equal to summed up number of squares
 if total == n
   puts "#{n} is a Kaprekar number."
 else
