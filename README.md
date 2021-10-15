@@ -173,6 +173,65 @@ This will run the given code file. Enter appropraite input to get desired output
 
 ----
 
+## Kaprekar
+
+### ❗ Problem Details
+> [What is Kaprekar numbers?](https://www.geeksforgeeks.org/kaprekar-number/)
+
+> [List of Kaprekar Numbers](http://oeis.org/A053816)
+
+Should return whether given positive integer by user, `n`, is kaprekar number or not.
+
+#### ⌨️ Example input:
+```bash
+9
+```
+
+```bash
+113
+```
+
+#### 💻 Expected output:
+**Output for `9`**
+```
+9 is a Kaprekar number.
+```
+
+**Output for `113`**
+```
+113 is not a Kaprekar number.
+```
+
+### ✔️ Solution Details
+
+<h4><img src="https://img.icons8.com/color/12/000000/idea.png"/> Logic</h4>
+
+1. Perform calculation only for integer input where `n` > 0.
+2. Take Square of `n` and save in a variable `n_sqr`.
+3. Convert `n_sqr` to an array, `arr`.
+5. We want our length of elements in `arr` to be an even number so it can be easily grouped into 2 where each group will be of equal lengths. So for odd length we input `0` before the number so it doesn't change its value and we have even length. So for `n_sqr` whose value is `121` whose length is 3 and after adding `0` we have `0121` which is equal to `121`.
+4. Count the number of elements in `arr` or in other words count the number of digits of `n_sqr` and save in `arr_count`.
+6. Initialize a variable, `total` which will calculate the sum of groups with `0`.
+7. Now we calculate the number of elements of `arr` we need to group for addition. We know that we want 2 groups and since `arr_count` is even it will easily divide into 2 and give us the number of members we will have for each group. Store this number in `members` var.
+8. Now we slice the list where each group has `members` number of elements of `arr` with the help of `.each_slice` method. Each iteration of this loop will take a `group` (iteration var) of these members, join the elements and add them to out `total` var.
+9. If `total == n` then its kaprekar else it isn't.
+
+
+The solution of this problem can be found in `kaprekar/program.rb` file.
+
+
+#### 📋 Local Execution
+
+Clone this repo, navigate to the `kaprekar/` directory and run the following commands in Terminal:
+
+```bash
+ruby program.rb
+```
+
+This will run the given code file. Enter appropraite input to get desired output.
+
+
+
 
 ![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.mathematica&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
 
