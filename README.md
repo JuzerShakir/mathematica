@@ -290,6 +290,62 @@ ruby program.rb
 
 This will run the given code file. Enter appropraite input to get desired output.
 
+----
+
+## Ratio
+
+### ❗ Problem Details
+
+Should return simplest form of rational number for any integers input by user, in the form of `n1/n2` where `n1` can be any integer whereas `n2` can also be any integer except `0`.
+
+#### ⌨️ Example input:
+```bash
+-91/-73
+```
+
+```bash
+-21/98
+```
+
+#### 💻 Expected output:
+**Output for `-91/-73`**
+```
+The greatest common divisor is 1 of -91/-73.
+And its simplest form is 91/73.
+```
+
+**Output for `-21/98`**
+```
+The greatest common divisor is 7 of -21/98.
+And its simplest form is -3/14.
+```
+
+### ✔️ Solution Details
+
+<h4><img src="https://img.icons8.com/color/12/000000/idea.png"/> Logic</h4>
+
+1. Take input from user in a rational form.
+2. Check if `n2` is not `0`. If it is then exit the program since dividing any integer by `0` will lead to infinity.
+3. To convert the fraction input to simplest form we need to first find `n1` & `n2` Greatest Common Divisor (GCD). Ruby provides `.gcd` method to find out.
+4. GCD calculation will raise error for unexpected string input. We will wrap `begin-rescue` to GCD calculation and gently infrom user and exit the program.
+5. After finding GCD of `n1/n2`, we will check if `gcd == 1`. If it is, it means that input fraction is already in its simplest form. We give output to the user and stop the program.
+5. For `gcd` other than `1`, divide both `n1` & `n2` by `gcd` to find other factor that which multiplied by `gcd` returns `n1` or `n2`.
+Store the value in new variable called `simple_n1` & `simple_n2` respectively.
+6. Convert `simple_n1` & `simple_n2` variables to rational numbers and store them in new var `simplest_form`.
+7. Show results to user.
+
+The solution of this problem can be found in `ratio/program.rb` file.
+
+
+#### 📋 Local Execution
+
+Clone this repo, navigate to the `ratio/` directory and run the following commands in Terminal:
+
+```bash
+ruby program.rb
+```
+
+This will run the given code file. Enter appropraite input to get desired output.
 
 
 ![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.mathematica&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
