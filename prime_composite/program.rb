@@ -1,8 +1,6 @@
-# asking for user input
 puts "Enter any positve integer:"
 n = gets.chomp.to_i
 
-# only positive numbers can be composite or prime numbers
 if n < 0 then abort("Only positive numbers allowed.") end
 
 
