@@ -12,7 +12,7 @@
 - [Factors](#factors)<br>
 - [Fibonacci](#fibonacci)<br>
 - [Kaprekar](#kaprekar)<br>
-- [Prime](#prime)<br>
+- [Prime & Composite](#prime_and_composite)<br>
 - [Ratio](#ratio)<br>
 
 ----
@@ -209,8 +209,8 @@ Should return whether given positive integer by user, `n`, is kaprekar number or
 1. Perform calculation only for integer input where `n` > 0.
 2. Take Square of `n` and save in a variable `n_sqr`.
 3. Convert `n_sqr` to an array, `arr`.
-5. We want our length of elements in `arr` to be an even number so it can be easily grouped into 2 where each group will be of equal lengths. So for odd length we input `0` before the number so it doesn't change its value and we have even length. So for `n_sqr` whose value is `121` whose length is 3 and after adding `0` we have `0121` which is equal to `121`.
-4. Count the number of elements in `arr` or in other words count the number of digits of `n_sqr` and save in `arr_count`.
+4. We want our length of elements in `arr` to be an even number so it can be easily grouped into 2 where each group will be of equal lengths. So for odd length we input `0` before the number so it doesn't change its value and we have even length. So for `n_sqr` whose value is `121` whose length is 3 and after adding `0` we have `0121` which is equal to `121`.
+5. Count the number of elements in `arr` or in other words count the number of digits of `n_sqr` and save in `arr_count`.
 6. Initialize a variable, `total` which will calculate the sum of groups with `0`.
 7. Now we calculate the number of elements of `arr` we need to group for addition. We know that we want 2 groups and since `arr_count` is even it will easily divide into 2 and give us the number of members we will have for each group. Store this number in `members` var.
 8. Now we slice the list where each group has `members` number of elements of `arr` with the help of `.each_slice` method. Each iteration of this loop will take a `group` (iteration var) of these members, join the elements and add them to out `total` var.
@@ -230,6 +230,65 @@ ruby program.rb
 
 This will run the given code file. Enter appropraite input to get desired output.
 
+-----
+
+## Prime and Composite
+
+### ❗ Problem Details
+> [What is Prime numbers?](https://thirdspacelearning.com/blog/what-is-a-prime-number/)
+
+> [What is Composite Numbers?](https://www.mathsisfun.com/definitions/composite-number.html)
+
+Should return whether given positive integer by user, `n`, is prime or composite number.
+
+#### ⌨️ Example input:
+```bash
+12
+```
+
+```bash
+7
+```
+
+#### 💻 Expected output:
+**Output for `12`**
+```
+12 is a composite number.
+```
+
+**Output for `7`**
+```
+7 is a prime number.
+```
+
+### ✔️ Solution Details
+
+<h4><img src="https://img.icons8.com/color/12/000000/idea.png"/> Logic</h4>
+
+1. Perform calculation only for integer input where `n` >= 0.
+2. End program for negative integer input.
+3. 0 & 1 are 2 numbers are neither prime nor composite so for input `n` with value of `0` or `1`, end program.
+4. We also know that any number which is fully divisble by 2 or in other words if its even, then it wont be a prime number but composite. But 2 is the only even number that is prime so for `n == 2` its prime number.
+5. Now to check if a odd number is prime or not we need to run loop from `3` to `n-1` because we know `n` is a factor of itself and we dont start from `2` because no odd number is fully divisible by `2`.
+6. We can loop through each number from `3` to `n` but what if `n` was a very large odd number? Looping through each number and checking if its fully divisible would be take time and put load on memory. To avoid this we only loop from `3` to `n * 0.5` because we know that factors can be found if there are halfway through only, so looping through all the way to `n` isn't practical.
+7. For any `n` greater than `5`, loop from `3` to `n * 0.5`. And for any `n` less than `5` loop from `3` to `n - 1`.
+8. Now in each loop we see if `n` is divisible by `factor` (loop var). If it is then its a composite number and we exit the program.
+9. It will continue to loop until it finds a factor that fully divides `n`.
+10. If it can't find factors then `n` is a Prime number.
+
+
+The solution of this problem can be found in `prime_composite/program.rb` file.
+
+
+#### 📋 Local Execution
+
+Clone this repo, navigate to the `prime_composite/` directory and run the following commands in Terminal:
+
+```bash
+ruby program.rb
+```
+
+This will run the given code file. Enter appropraite input to get desired output.
 
 
 
