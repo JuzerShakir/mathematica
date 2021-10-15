@@ -23,7 +23,7 @@ if n.prime?
 end
 
 # since we know 1 is a factor of any number, we start our calculations from 2
-2.upto(n) do | factor |
+2.upto(n-1) do | factor |
   # this line is key to stop loop earlier
   # it will stop looping if it finds that factor is already included in list which means its calculation is already done
   if factors.include?(factor)
