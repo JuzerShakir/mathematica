@@ -152,7 +152,7 @@ Its index in fibonacci sequence is 4.
 1. Perform calculation only for integer input where `n` > 0.
 2. Initialize an array, `fibonacci_seq`, which will hold the fibonacci numbers and initiate it with values of `0` & `1` so we can calculate next fibonacci numbers.
 3. Initiate a loop where in each iteration it performs addition of last 2 fibonacci numbers in `fibonacci_seq` array to find next fiobanacci number. Break the loop if the fibonacci number calculated in this iteration is greater than the input number `n`. However if its less than `n` then append the fibonacci number to `fibonacci_seq`. Break the loop if the fibonacci number is equal to `n`.
-4. Will continue iteration (Step 3) until conditions meet and `break` is applied.
+4. Will continue iteration (Step 3) until output of each iteration is equal to or greater than `n`.
 5. If user entered a fibonacci number then show output of its index in the `fibonacci_seq`. Otherwise show the nearest fibonacci numbers both before and after `n`.
 
 
