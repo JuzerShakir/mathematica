@@ -8,7 +8,7 @@ if n < 0 then abort("Factorials can only be calculated for positive integers") e
 # explained => https://www.youtube.com/watch?v=X32dce7_D48&ab_channel=EddieWoo
 total = 1
 
-1.upto(n) { | n | total *= n }
+1.upto(n) { | i | total *= i }
 
 puts "\nFactorial of #{n} is #{total}."
 
