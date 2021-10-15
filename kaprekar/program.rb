@@ -12,23 +12,23 @@ n_sqr = n ** 2
 # converts int to array
 arr = n_sqr.digits.reverse
 # length of squared number
-arr_len = arr.count
+arr_count = arr.count
 #p arr
-# p arr_len
+# p arr_count
 
 # if the length is odd we add a 0 before the number, this wont change the value
 # we will need an even number of digits for grouping
-arr.unshift(0) if arr_len.odd?
+arr.unshift(0) if arr_count.odd?
 #p arr
 
 # that will hold the value of sum of digits
 total = 0
 
 # we group numbers with breaker number of digits which will be half of the lenght rounded to the nearest integer
-# since length of our arr which holds square value will always be even we can directly give arr_len..
+# since length of our arr which holds square value will always be even we can directly give arr_count..
 # but for number 1 it is special case where length of 1 square is 1 and dividng that by 2 will give 0.5 and array slicing will raise error
 # so we round to nearest int
-breaker = (arr_len.to_f / 2).round
+breaker = (arr_count.to_f / 2).round
 
 arr.each_slice(breaker) do | ele |
   #p breaker
