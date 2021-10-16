@@ -69,7 +69,7 @@ This will run the given code file. Enter appropraite input to get desired output
 ## Factors
 
 ### ❗ Problem Details
-> [What is factors?](https://www.britannica.com/science/factor-mathematics)
+> [What are factors?](https://www.britannica.com/science/factor-mathematics)
 
 Should return list of factors in ascending order for any integer input which is greater than equal to 1.
 
@@ -176,7 +176,7 @@ This will run the given code file. Enter appropraite input to get desired output
 ## Kaprekar
 
 ### ❗ Problem Details
-> [What is Kaprekar numbers?](https://www.geeksforgeeks.org/kaprekar-number/)
+> [What are Kaprekar numbers?](https://www.geeksforgeeks.org/kaprekar-number/)
 
 > [List of Kaprekar Numbers](http://oeis.org/A053816)
 
@@ -235,9 +235,9 @@ This will run the given code file. Enter appropraite input to get desired output
 ## Prime and Composite
 
 ### ❗ Problem Details
-> [What is Prime numbers?](https://thirdspacelearning.com/blog/what-is-a-prime-number/)
+> [What are Prime numbers?](https://thirdspacelearning.com/blog/what-is-a-prime-number/)
 
-> [What is Composite Numbers?](https://www.mathsisfun.com/definitions/composite-number.html)
+> [What are Composite Numbers?](https://www.mathsisfun.com/definitions/composite-number.html)
 
 Should return whether given positive integer by user, `n`, is prime or composite number.
 
