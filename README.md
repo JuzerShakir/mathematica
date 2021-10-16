@@ -8,6 +8,7 @@
 
 <h3>Table Of Contents:</h3>
 
+- [Valid Circle?](#valid-circle?)
 - [Factorial](#factorial)<br>
 - [Factors](#factors)<br>
 - [Fibonacci](#fibonacci)<br>
@@ -16,6 +17,75 @@
 - [Ratio](#ratio)<br>
 
 ----
+
+## Valid Circle?
+
+### ❗ Problem Details
+
+For given positive integer by user for circumference, `c`, and diameter, `d`, figure out if its a valid or fake circle. For valid circle, output its area. For fake circle, show its correct measurement of `c` or `d` which would then make a valid circle.
+
+#### ⌨️ Example input:
+
+**1st Input**
+```
+circumference = 31.42
+diameter = 10
+```
+
+**2nd Input**
+```
+circumference = 456
+diameter = 123
+```
+
+#### 💻 Expected output:
+
+**Output for 1st input:**
+```
+Its a valid circle.
+```
+
+**Output for 2nd input:**
+```
+Its not a valid circle!
+Either diameter or circumference measurement is worng.
+Calculating ...
+
+Assuming the measurement of circumference is wrong and diameter is right.
+Circumference = 386.22.
+Assuming the measurement of diameter is wrong and circumference is right.
+Diameter = 145.22.
+```
+
+### ✔️ Solution Details
+
+<h4><img src="https://img.icons8.com/color/12/000000/idea.png"/> Logic</h4>
+
+1. First take measurement of cicumference, `c`, convert to float and round to nearest hundreth.
+2. Then take measurement of diameter, `d` convert to float and round to nearest hundreth.
+3. Check if user has entered a valid input. Exit program if any of the input is `0` or negative numbers.
+4. We now initialize `PI` constant which will hold the value of PI and we can get that value from Rubys' Math library, round to the nearest hundreth.
+5. For a circle to be valid, the ratio of `c` & `d` should be equal to `PI`. So we calculate its ratio and save the value in a constant `RATIO` rounding answer to nearest hundreth.
+6. If `PI == RATIO` then circle is valid and also calculate its area.
+7. If `PI != RATIO` then circle isn't valid. So either user has entered wrong meausurement of `c` or `d`.
+8. We will calculate correct measurements of both `c` and `d`. If measurement of `c` is correct then we will calculate `d` and if `d` is correct then will calculate `c`. Since we dont know which measurement is right or wrong and since for any `d` and `c` there can be a circle, we will output correct measurements of both `d` and `c`.
+
+
+The solution of this problem can be found in `valid_circle/program.rb` file.
+
+
+#### 📋 Local Execution
+
+Clone this repo, navigate to the `valid_circle/` directory and run the following commands in Terminal:
+
+```bash
+ruby program.rb
+```
+
+This will run the given code file. Enter appropraite input to get desired output.
+
+----
+
 
 ## Factorial
 
