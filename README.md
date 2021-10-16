@@ -51,9 +51,9 @@ Its not a valid circle!
 Either diameter or circumference measurement is worng.
 Calculating ...
 
-Assuming the measurement of circumference is wrong and diameter is right.
+Assuming the measurement of circumference is wrong and diameter is right, then ..
 Circumference = 386.22.
-Assuming the measurement of diameter is wrong and circumference is right.
+Assuming the measurement of diameter is wrong and circumference is right, then ..
 Diameter = 145.22.
 ```
 
