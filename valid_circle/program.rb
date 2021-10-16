@@ -28,11 +28,11 @@ else
   sleep(2)
 
   CIRCUMFERENCE = (2 * PI * (d/2)).round(2)
-  puts "\nAssuming the measurement of circumference is wrong and diameter is right."
+  puts "\nAssuming the measurement of circumference is wrong and diameter is right, then .."
   puts "Circumference = #{CIRCUMFERENCE}."
 
   DIAMETER = (c/PI).round(2)
-  puts "Assuming the measurement of diameter is wrong and circumference is right."
+  puts "Assuming the measurement of diameter is wrong and circumference is right, then.."
   puts "Diameter = #{DIAMETER}."
 end
 
