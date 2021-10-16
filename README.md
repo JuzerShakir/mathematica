@@ -8,7 +8,7 @@
 
 <h3>Table Of Contents:</h3>
 
-- [Valid Circle?](#valid-circle?)
+- [Valid Circle?](#valid-circle)
 - [Factorial](#factorial)<br>
 - [Factors](#factors)<br>
 - [Fibonacci](#fibonacci)<br>
@@ -18,7 +18,7 @@
 
 ----
 
-## Valid Circle?
+## Valid Circle
 
 ### ❗ Problem Details
 
